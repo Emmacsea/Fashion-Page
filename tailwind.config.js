@@ -10,7 +10,8 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'header-img': `url(${path.resolve(__dirname, 'src/assets/FASHION JPG/alyssa-strohmann-TS--uNw-JqE-unsplash.jpg')})`,
+        'headerabt-img': `url(${path.resolve(__dirname, 'src/assets/FASHION JPG/alyssa-strohmann-TS--uNw-JqE-unsplash.jpg')})`,
+        'about-img': `url(${path.resolve(__dirname, 'src/assets/FASHION JPG/bryanfoto-Z2u8hseVlZc-unsplash.jpg')})`,
       }
     },
   },
