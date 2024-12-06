@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.head-link {
+  @apply text-neutral-500 text-base font-bold capitalize hover:underline
+}
+
+.head-icon {
+  @apply text-neutral-700 text-lg font-semibold cursor-pointer
+}
