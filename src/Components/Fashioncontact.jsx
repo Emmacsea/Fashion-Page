@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { FaSearch, FaMailBulk, FaFacebook, FaPinterest, FaTwitter, FaInstagram,
     FaLock, FaTruck, FaArrowAltCircleLeft, FaKey,
  } from "react-icons/fa";
@@ -14,11 +15,38 @@ export const Contact = ({
     onChangeName,
     onChangeEmail,
     onChangeMessage,
+    onSubmitDetails,
 }) => {
-    return(
+    const [error, setError] = useState({});
+
+    const validateEmail = (email) => {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    };
+
+    const handleDetails = (e) => {
+        e.preventDefault();
+
+        const newError = {};
+
+        if (!name) newError.name = "This field cannot be empty";
+        if (!email || !validateEmail(email)) newError.email = "Input a valid email address";
+        if (!message) newError.message = "This field cannot be empty";
+
+        setError(newError);
+        if(Object.keys(newError).length === 0){
+            onSubmitDetails();
+        }
+
+    }
+
+
+
+    return(  
         <div className="min-h-full bg-neutral-100">
-            <div className="bg-headercont-img bg-cover bg-center pt-1 ">                
-                <header className="flex justify-between items-center  py-2 px-12">
+            <div className="relative bg-headercont-img bg-cover bg-center pt-1 ">                
+                <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+                <header className="relative flex justify-between items-center  py-2 px-12">
                     <ul className="flex space-x-4 items-center">
                         <li><button className="contact-link" type="click" onClick={onClickHome}>Home</button></li>
                         <li><button className="contact-link" type="button">Shop</button></li>
@@ -26,7 +54,7 @@ export const Contact = ({
                         <li><button className="contact-link" type="click" onClick={onClickContact} >Contact us</button></li>
                     </ul>
 
-                    <div className="text-neutral-100 font-extrabold border-b-2 border-solid border-neutral-700 -space-y-1 text-center">
+                    <div className="text-neutral-100 font-extrabold border-b-2 border-solid border-neutral-100 -space-y-1 text-center">
                         <h6 className="text-sm">Emmac</h6>
                         <p className="text-base italic">Wardrobe</p>                        
                     </div>
@@ -37,8 +65,8 @@ export const Contact = ({
                     </div>
                 </header>
 
-                <div className="flex justify-center items-center text-center py-32 text-neutral-200 text-5xl italic font-semibold">
-                    <p>Contact Us</p>
+                <div className="relative flex justify-center items-center text-center py-32 ">
+                    <p className="text-white text-5xl italic font-semibold">Contact Us</p>
                 </div>    
 
             </div>
@@ -53,13 +81,30 @@ export const Contact = ({
                     </p>
                 </div>
                 
-                <div className="flex justify-between space-x-12 px-24 py-7 w-full ">
+                <div className="flex justify-between space-x-16 px-24 py-7 w-full ">
                     <div className="w-1/2">
-                        <form action="" >
-                            <div className="flex flex-col space-y-4">
-                                <input className="cont-inp" type="text" value={name} onChange={onChangeName} placeholder="Name" />
-                                <input className="cont-inp" type="text" value={email} onChange={onChangeEmail} placeholder="Email" />
-                                <textarea className="cont-inp" placeholder="Message" value={message} onChange={onChangeMessage} id="" cols="50" rows="8"></textarea>
+                        <form action="" onSubmit={handleDetails}>
+                            <div className="flex flex-col space-y-5 w-full">
+                            <div className="flex flex-col">
+                                    <input className="cont-inp" type="text" value={name} onChange={onChangeName} placeholder="Name" />
+                                    {error.name && (
+                                        <p className="err">{error.name}</p>
+                                    )}
+                                </div>
+
+                                <div className="flex flex-col">
+                                    <input className="cont-inp" type="text" value={email} onChange={onChangeEmail} placeholder="Email" />
+                                    {error.email && (
+                                        <p className="err">{error.email}</p>
+                                    )}
+                                </div>
+
+                                <div className="flex flex-col">
+                                    <textarea className="cont-inp" placeholder="Message" value={message} onChange={onChangeMessage} id="" cols="50" rows="8"></textarea>
+                                    {error.message && (
+                                            <p className="err">{error.message}</p>
+                                    )}
+                                </div>
                             </div>
                             <input className="text-neutral-600 text-lg font-bold uppercase mt-3 border-2 border-neutral-800 py-2 px-7" type="submit" value="Send"  />
                         </form>
@@ -236,4 +281,5 @@ Contact.propTypes = {
     onChangeName: PropTypes.func.isRequired,
     onChangeEmail: PropTypes.func.isRequired,
     onChangeMessage: PropTypes.func.isRequired,
+    onSubmitDetails: PropTypes.func.isRequired,
 }

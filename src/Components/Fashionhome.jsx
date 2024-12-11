@@ -22,8 +22,9 @@ export default function Home ({
 }) {
     return(
         <div className="min-h-full bg-neutral-100">
-            <div className="bg-headerhme-img bg-cover bg-center pt-1 ">                
-                <header className="flex justify-between items-center  py-2 px-12">
+            <div className="relative bg-headerhme-img bg-cover bg-center pt-1 ">                
+                <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+                <header className="relative flex justify-between items-center  py-2 px-12">
                     <ul className="flex space-x-4 items-center">
                         <li><button className="home-link" type="click" onClick={onClickHome}>Home</button></li>
                         <li><button className="home-link" type="button">Shop</button></li>
@@ -31,7 +32,7 @@ export default function Home ({
                         <li><button className="home-link" type="click" onClick={onClickContact} >Contact us</button></li>
                     </ul>
 
-                    <div className="text-neutral-900 font-bold border-b-2 border-solid border-neutral-700 -space-y-1 text-center">
+                    <div className="text-neutral-100 font-bold border-b-2 border-solid border-neutral-200 -space-y-1 text-center">
                         <h6 className="text-sm">Emmac</h6>
                         <p className="text-base italic">Wardrobe</p>                        
                     </div>
@@ -42,17 +43,17 @@ export default function Home ({
                     </div>
                 </header>
 
-                <div className="flex flex-col space-y-4 justify-center items-center text-center px-24 py-16">
-                    <h2 className="text-neutral-700 text-sm font-bold uppercase" >Casual & Everyday</h2>
-                    <p className="text-neutral-700 text-3xl font-semibold capitalize">
+                <div className="relative flex flex-col space-y-4 justify-center items-center text-center px-24 py-16">
+                    <h2 className="text-neutral-100 text-sm font-bold uppercase" >Casual & Everyday</h2>
+                    <p className="text-neutral-100 text-3xl font-semibold capitalize">
                         Effortlessly blend comfort & style!
                     </p>
-                    <p className="text-neutral-800 text-lg font-medium">
+                    <p className="text-neutral-100 text-lg font-medium">
                         Effortlessly blend comfort and style with our Casual & Everyday collection, 
                         featuring cozy sweaters, versatile denim, laid-back tees, and relaxed-fit joggers 
                         for your everyday adventures.
                     </p>
-                    <button type="button" className="border-2 border-neutral-300 uppercase text-neutral-800 text-base font-bold py-2 px-5 " >
+                    <button type="button" className="border-2 border-neutral-300 uppercase text-neutral-200 text-base font-bold py-2 px-5 " >
                         View Collection
                     </button>
                 </div>    
@@ -183,13 +184,14 @@ export default function Home ({
 
                 </div>
 
-                <div className="bg-home-img bg-cover bg-center  flex justify-end items-end px-24" >
-                            <div className="py-12 w-60 text-center space-y-3">
+                <div className="relative bg-home-img bg-cover bg-center  flex justify-end items-end px-24" >
+                    <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+                            <div className="relative py-12 w-60 text-center space-y-3">
                                 <div><img className="w-full h-72 bg-gradient-to-t from-neutral-800 to-neutral-900" src={bag} alt="" /></div>
-                                <h2 className="text-gray-900 text-xl italic font-extrabold capitalize mt-4">
+                                <h2 className="text-gray-100 text-xl italic font-extrabold capitalize mt-4">
                                     Explore our exquite bage collection now!
                                 </h2>
-                                <button type="button" className="border-2 border-neutral-600 py-2 px-7 text-gray-700 text-lg font-extrabold uppercase">
+                                <button type="button" className="border-2 border-neutral-6=200 py-2 px-7 text-gray-100 text-lg font-extrabold uppercase">
                                     view Collection
                                 </button>
                             </div>
@@ -221,17 +223,18 @@ export default function Home ({
                 </div>
 
                 <div className="relative bg-home2-img bg-cover bg-center pb-60 px-24 flex justify-start items-start ">
-                    <div className="">
+                    <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+                    <div className="flex justify-start items-start w-96"  >
                         <div className="absolute -top-32 z-10"><img className="w-96 h-80" src={fas} alt="" /></div>
-                        <div className="mt-52 space-y-2 w-96">
-                            <h2 className="text-gray-900 text-3xl capitalize font-bold">
+                        <div className="relative mt-52 space-y-3 w-full">
+                            <h2 className="text-gray-100 text-3xl capitalize font-bold">
                                 Discover The allure of fashion reinvented!
                             </h2>
-                            <p className="text-neutral-400 text-lg font-bold ">
+                            <p className="text-neutral-100 text-lg font-bold ">
                                 Dive into a world of style with our latest collection! 
                                 Shop now and redefine your wardrobe narrative!
                             </p>
-                            <button type="button" className="text-neutral-400 text-base uppercase font-bold border-2 border-solid border-neutral-400 py-2 px-7">
+                            <button type="button" className="text-neutral-100 text-base uppercase font-bold border-2 border-solid border-neutral-200 py-2 px-7">
                                 Shop Now
                             </button>
                         </div>
@@ -360,20 +363,21 @@ export default function Home ({
             </div>
 
             <footer className="">
-                <div className="bg-footer-img bg-cover bg-center py-44 pr-20 pl-96   ">
-                   <div className="flex flex-col justify-end items-start space-y-5 ml-72">
-                        <span className="text-neutral-700 font-bold uppercase">Explore</span> 
+                <div className="relative bg-footer-img bg-cover bg-center py-44 pr-20 pl-96   ">
+                    <div className="relative inset-0 bg-black bg-opacity-50"></div>
+                   <div className="relative flex flex-col justify-end items-start space-y-5 ml-72">
+                        <span className="text-neutral-100 font-bold uppercase">Explore</span> 
 
-                        <h3 className="text-neutral-700 text-3xl font-semibold capitalize">
+                        <h3 className="text-neutral-100 text-3xl font-semibold capitalize">
                         Elevate your wardrobe, embrace timeless style!
                         </h3>
 
-                        <p className="text-neutral-700 text-base font-medium">
+                        <p className="text-neutral-100 text-base font-medium">
                             Explore our collections today and experience the joy of fashion. Shop 
                             now for the epitome of chic sophistication!
                         </p>
 
-                        <button type="button" className="flex justify-end bg-transparent text-neutral-700 uppercase text-base font-semibold border-2 border-neutral-500 py-2 px-4">
+                        <button type="button" className="flex justify-end bg-transparent text-neutral-100 uppercase text-base font-semibold border-2 border-neutral-200 py-2 px-4">
                             Shop now
                         </button>
                    </div>

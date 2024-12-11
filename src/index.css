@@ -5,11 +5,11 @@
 
 /* Home */
 .home-link {
-  @apply text-neutral-900 text-base font-bold capitalize hover:underline
+  @apply text-neutral-100 text-base font-bold capitalize hover:underline
 }
 
 .home-icon {
-  @apply text-neutral-700 text-lg font-semibold cursor-pointer
+  @apply text-neutral-100 text-lg font-semibold cursor-pointer
 }
 
 .det {
@@ -48,11 +48,11 @@
 /* About */
 
 .head-link {
-  @apply text-neutral-500 text-base font-bold capitalize hover:underline
+  @apply text-neutral-100 text-base font-bold capitalize hover:underline
 }
 
 .head-icon {
-  @apply text-neutral-700 text-lg font-semibold cursor-pointer
+  @apply text-neutral-100 text-lg font-semibold cursor-pointer
 }
 
 .footer-head {
@@ -63,13 +63,14 @@
   @apply text-neutral-500 text-base font-semibold capitalize
 }
 
+
 /* Contact CSS */
 .contact-link {
-  @apply text-neutral-200 text-base font-bold capitalize hover:underline
+  @apply text-neutral-100 text-base font-bold capitalize hover:underline
 }
 
 .contact-icon {
-  @apply text-neutral-300 text-lg font-semibold cursor-pointer
+  @apply text-neutral-100 text-lg font-semibold cursor-pointer
 }
 
 .cont-inp {
@@ -94,4 +95,8 @@
 
 .cont-p {
   @apply text-neutral-500 text-base font-semibold italic
+}
+
+.err {
+  @apply flex justify-end items-end text-red-200 text-sm font-semibold
 }

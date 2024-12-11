@@ -8,8 +8,9 @@ export const About = ({
 }) => {
     return (
         <div className="min-h-full bg-neutral-100">
-            <div className="bg-headerabt-img bg-cover bg-center pt-1 ">                
-                <header className="flex justify-between items-center  py-2 px-12">
+            <div className="relative bg-headerabt-img bg-cover bg-center pt-1 ">                
+                <div className="absolute inset-0 bg-black bg-opacity-50 "></div>
+                <header className="relative flex justify-between items-center  py-2 px-12">
                     <ul className="flex space-x-4 items-center">
                         <li><button className="head-link" type="click" onClick={onClickHome}>Home</button></li>
                         <li><button className="head-link" type="button">Shop</button></li>
@@ -17,7 +18,7 @@ export const About = ({
                         <li><button className="head-link" type="click" onClick={onClickContact} >Contact us</button></li>
                     </ul>
 
-                    <div className="text-neutral-900 font-bold border-b-2 border-solid border-neutral-700 -space-y-1 text-center">
+                    <div className="text-neutral-100 font-bold border-b-2 border-solid border-neutral-100 -space-y-1 text-center">
                         <h6 className="text-sm">Emmac</h6>
                         <p className="text-base italic">Wardrobe</p>                        
                     </div>
@@ -28,7 +29,7 @@ export const About = ({
                     </div>
                 </header>
 
-                <div className="flex justify-center items-center text-center py-32 text-neutral-800 text-5xl italic font-semibold">
+                <div className="relative flex justify-center items-center text-center py-32 text-neutral-100 text-5xl italic font-semibold">
                     <p>About Us</p>
                 </div>                
 
@@ -82,23 +83,26 @@ export const About = ({
                 </p>
             </div>
 
-            <div className="bg-about-img bg-cover bg-center py-44 pl-24 pr-96 flex flex-col space-y-4 justify-start">
-                <span className="text-neutral-600 text-xs font-bold uppercase">Customer-centric approach</span>
+            <div className="relative bg-about-img bg-cover bg-center py-44 pl-24 pr-96 flex flex-col space-y-4 justify-start">
+                <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+                <div className="relative space-y-3">
+                    <span className="text-neutral-100 text-xs font-bold uppercase">Customer-centric approach</span>
 
-                <h2 className="text-neutral-600 text-4xl font-bold capitalize">
-                    Beyond Fashion: Nurturing a customer-centric experience
-                </h2>
+                    <h2 className="text-neutral-300 text-4xl font-bold capitalize">
+                        Beyond Fashion: Nurturing a customer-centric experience
+                    </h2>
 
-                <p className="text-neutral-400 text-base font-medium ">
-                    We believe that the essence of our success lies in the satisfaction of our customers. 
-                    Our commitment to providing an exceptional shopping experince goes beyond trends and 
-                    styles - It&apos;s about understanding and meeting the unique needs of every individual 
-                    who chooses EmmacWardrobe. From personalized  recommendations to hassle-free returns, 
-                    We&apos;ve crafted every aspect of our service with you in mind. Our dedicated customer 
-                    support team is here to ensure your journey with us is seamless, enjoyable, and exceeds 
-                    your expectations. Join our community of empowered fashion enthusiasts, where your 
-                    satisfaction is not just a priority; it&apos;s our mission.
-                </p>
+                    <p className="text-neutral-200 text-base font-medium ">
+                        We believe that the essence of our success lies in the satisfaction of our customers. 
+                        Our commitment to providing an exceptional shopping experince goes beyond trends and 
+                        styles - It&apos;s about understanding and meeting the unique needs of every individual 
+                        who chooses EmmacWardrobe. From personalized  recommendations to hassle-free returns, 
+                        We&apos;ve crafted every aspect of our service with you in mind. Our dedicated customer 
+                        support team is here to ensure your journey with us is seamless, enjoyable, and exceeds 
+                        your expectations. Join our community of empowered fashion enthusiasts, where your 
+                        satisfaction is not just a priority; it&apos;s our mission.
+                    </p>
+                </div>
             </div>
 
             <div className="px-24 py-11 space-y-8">
@@ -140,20 +144,21 @@ export const About = ({
             </div>
 
             <footer className="">
-                <div className="bg-footer-img bg-cover bg-center py-44 pr-20 pl-96   ">
-                   <div className="flex flex-col justify-end items-start space-y-5 ml-72">
-                        <span className="text-neutral-700 font-bold uppercase">Explore</span> 
+                <div className="relative bg-footer-img bg-cover bg-center py-44 pr-20 pl-96   ">
+                    <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+                   <div className="relative flex flex-col justify-end items-start space-y-5 ml-72">
+                        <span className="text-neutral-100 font-bold uppercase">Explore</span> 
 
-                        <h3 className="text-neutral-700 text-3xl font-semibold capitalize">
+                        <h3 className="text-neutral-100 text-3xl font-semibold capitalize">
                         Elevate your wardrobe, embrace timeless style!
                         </h3>
 
-                        <p className="text-neutral-700 text-base font-medium">
+                        <p className="text-neutral-100 text-base font-medium">
                             Explore our collections today and experience the joy of fashion. Shop 
                             now for the epitome of chic sophistication!
                         </p>
 
-                        <button type="button" className="flex justify-end bg-transparent text-neutral-700 uppercase text-base font-semibold border-2 border-neutral-500 py-2 px-4">
+                        <button type="button" className="flex justify-end bg-transparent text-neutral-100 uppercase text-base font-semibold border-2 border-neutral-200 py-2 px-4">
                             Shop now
                         </button>
                    </div>
