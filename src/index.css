@@ -3,10 +3,95 @@
 @tailwind utilities;
 
 
+/* Home */
+.home-link {
+  @apply text-neutral-900 text-base font-bold capitalize hover:underline
+}
+
+.home-icon {
+  @apply text-neutral-700 text-lg font-semibold cursor-pointer
+}
+
+.det {
+  @apply text-neutral-500 text-lg font-semibold capitalize
+}
+
+.det-head {
+  @apply text-neutral-500 text-base font-semibold
+}
+
+.det-body {
+  @apply text-neutral-800 text-xl font-bold capitalize
+}
+
+.det-prize {
+  @apply text-neutral-600 text-base font-bold 
+}
+
+.det-size {
+  @apply text-neutral-600 text-base font-semibold uppercase border-2 border-neutral-400 py-1 px-3
+}
+
+.det-name {
+  @apply text-neutral-400 text-base font-semibold capitalize mt-2
+}
+
+.det-title {
+  @apply text-neutral-900 text-lg font-semibold capitalize
+}
+
+.title-prize {
+  @apply text-neutral-600 text-base font-semibold 
+}
+
+
+/* About */
+
 .head-link {
   @apply text-neutral-500 text-base font-bold capitalize hover:underline
 }
 
 .head-icon {
   @apply text-neutral-700 text-lg font-semibold cursor-pointer
+}
+
+.footer-head {
+  @apply text-neutral-800 text-xl font-bold
+}
+
+.footer-link {
+  @apply text-neutral-500 text-base font-semibold capitalize
+}
+
+/* Contact CSS */
+.contact-link {
+  @apply text-neutral-200 text-base font-bold capitalize hover:underline
+}
+
+.contact-icon {
+  @apply text-neutral-300 text-lg font-semibold cursor-pointer
+}
+
+.cont-inp {
+  @apply  border-2 border-neutral-300 text-base font-semibold bg-transparent px-5 py-2 placeholder:text-neutral-500 placeholder:text-base placeholder:font-semibold focus:outline-none 
+}
+
+.cont {
+  @apply text-neutral-500 text-sm font-semibold uppercase
+}
+
+.contact {
+  @apply text-neutral-800 text-base font-bold capitalize
+}
+
+.cont-icon {
+  @apply text-neutral-800 text-lg font-semibold 
+}
+
+.cont-e {
+  @apply text-neutral-800 text-xl font-semibold capitalize italic
+}
+
+.cont-p {
+  @apply text-neutral-500 text-base font-semibold italic
 }

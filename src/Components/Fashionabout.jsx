@@ -1,15 +1,20 @@
-import { FaSearch, FaMailBulk, } from "react-icons/fa"
+import { FaSearch, FaMailBulk, } from "react-icons/fa";
+import PropTypes from 'prop-types';
 
-export const About = () => {
+export const About = ({
+    onClickHome,
+    onClickAbout,
+    onClickContact,
+}) => {
     return (
         <div className="min-h-full bg-neutral-100">
             <div className="bg-headerabt-img bg-cover bg-center pt-1 ">                
                 <header className="flex justify-between items-center  py-2 px-12">
                     <ul className="flex space-x-4 items-center">
-                        <li><a className="head-link" href="#">Home</a></li>
-                        <li><a className="head-link" href="#">Shop</a></li>
-                        <li><a className="head-link" href="#">About us</a></li>
-                        <li><a className="head-link" href="#">Contact us</a></li>
+                        <li><button className="head-link" type="click" onClick={onClickHome}>Home</button></li>
+                        <li><button className="head-link" type="button">Shop</button></li>
+                        <li><button className="head-link" type="click" onClick={onClickAbout}>About us</button></li>
+                        <li><button className="head-link" type="click" onClick={onClickContact} >Contact us</button></li>
                     </ul>
 
                     <div className="text-neutral-900 font-bold border-b-2 border-solid border-neutral-700 -space-y-1 text-center">
@@ -58,7 +63,7 @@ export const About = () => {
                 </div>
             </div>
 
-            <div className="py-10 mx-24 space-y-5">
+            <div className="py-14 mx-24 space-y-5">
                 <span className="text-neutral-950 text-xs font-bold uppercase">Quality Assurance</span>
                 
                 <h2 className="text-neutral-950 text-3xl italic font-bold capitalize">
@@ -77,10 +82,10 @@ export const About = () => {
                 </p>
             </div>
 
-            <div className="bg-about-img bg-cover bg-center py-10 pl-24 pr-96 flex flex-col space-y-4 justify-start">
+            <div className="bg-about-img bg-cover bg-center py-44 pl-24 pr-96 flex flex-col space-y-4 justify-start">
                 <span className="text-neutral-600 text-xs font-bold uppercase">Customer-centric approach</span>
 
-                <h2 className="text-neutral-600 text-lg font-bold">
+                <h2 className="text-neutral-600 text-4xl font-bold capitalize">
                     Beyond Fashion: Nurturing a customer-centric experience
                 </h2>
 
@@ -94,12 +99,124 @@ export const About = () => {
                     your expectations. Join our community of empowered fashion enthusiasts, where your 
                     satisfaction is not just a priority; it&apos;s our mission.
                 </p>
+            </div>
 
+            <div className="px-24 py-11 space-y-8">
+                <div className="space-y-4">
+                    <span className="text-neutral-900 text-xs font-bold uppercase">Sustainability Initiatives</span>
+
+                    <h3 className="text-neutral-900 text-xl font-bold capitalize italic">
+                        Conscious Fashion for a better tommorow
+                    </h3>
+                </div>
+
+                <div className="flex justify-between space-x-24">
+                    <div className="w-1/2">
+                        <p className="text-neutral-900 text-base font-bold">
+                            We recognize the responsibility we hold in shaping a more sustainable 
+                            future for fashion. Our connection to Eco-friendly practices and 
+                            sustainable fashion choices is at the care of what we do.
+                        </p>
+                    </div>
+
+                    <div className="w-1/2 space-y-4">
+                        <p className="text-neutral-500 text-base font-semibold">
+                            From the careful section of ethically sorced materials to the 
+                            implementation of environmentally consious manufacturing processes, 
+                            every step we take is a stride toward a greneer and more sustainable industry.
+                        </p>
+
+                        <p className="text-neutral-500 text-base font-semibold">
+                            We prioritize transparency in our supply chain, partnering with suppliers who 
+                            share our values of fair labour practices and environmental stewardship. Our 
+                            sustainable fashion choices extend to packaging as well - we use recysclable 
+                            materials to mininize our environmental footprint. Join us on this journey towards 
+                            consious fashion, where style meets responsibility, and every purchase contributes 
+                            to a brighter, eco-friendly tommorow.
+                        </p>
+                    </div>
+                </div>                
 
             </div>
+
+            <footer className="">
+                <div className="bg-footer-img bg-cover bg-center py-44 pr-20 pl-96   ">
+                   <div className="flex flex-col justify-end items-start space-y-5 ml-72">
+                        <span className="text-neutral-700 font-bold uppercase">Explore</span> 
+
+                        <h3 className="text-neutral-700 text-3xl font-semibold capitalize">
+                        Elevate your wardrobe, embrace timeless style!
+                        </h3>
+
+                        <p className="text-neutral-700 text-base font-medium">
+                            Explore our collections today and experience the joy of fashion. Shop 
+                            now for the epitome of chic sophistication!
+                        </p>
+
+                        <button type="button" className="flex justify-end bg-transparent text-neutral-700 uppercase text-base font-semibold border-2 border-neutral-500 py-2 px-4">
+                            Shop now
+                        </button>
+                   </div>
+                </div>
+
+                <div className="flex justify-between items-start px-24 py-11 border-b-2 border-b-solid border-b-neutral-400">
+                    <div className="space-y-3">
+                        <h2 className="footer-head">Menu</h2>
+                        <ul>
+                            <li><a className="footer-link" href="#">Home</a></li>
+                            <li><a className="footer-link" href="#">Shop</a></li>
+                            <li><a className="footer-link" href="#">About us</a></li>
+                            <li><a className="footer-link" href="#">Contact us</a></li>
+                        </ul>
+                    </div>
+
+                    <div className="space-y-3">
+                        <h2 className="footer-head">Categories</h2>
+                        <ul>
+                            <li><a className="footer-link" href="#">Casual</a></li>
+                            <li><a className="footer-link" href="#">Work & office</a></li>
+                            <li><a className="footer-link" href="#">Activewear</a></li>
+                            <li><a className="footer-link" href="#">Evening dresses</a></li>
+                        </ul>
+                    </div>
+
+                    <div className="space-y-3">
+                        <h2 className="footer-head">Resources</h2>
+                        <ul>
+                            <li><a className="footer-link" href="#">Contact support</a></li>
+                            <li><a className="footer-link" href="#">FAQ</a></li>
+                            <li><a className="footer-link" href="#">Live chat</a></li>
+                            <li><a className="footer-link" href="#">Returns</a></li>
+                        </ul>
+                    </div>
+
+                    <div className="space-y-3">
+                        <h2 className="footer-head">Social media</h2>
+                        <ul>
+                            <li><a className="footer-link" href="#">Facebook</a></li>
+                            <li><a className="footer-link" href="#">Twitter</a></li>
+                            <li><a className="footer-link" href="#">Instagram</a></li>
+                            <li><a className="footer-link" href="#">Pinterest</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div className="py-7">
+                    <p className="text-neutral-800 text-sm font-medium text-center">
+                        Copyright &copy; {new Date().getFullYear()} Emmac Clothing Store | Powered by Emmac Store
+                    </p>
+                </div>
+
+            </footer>
 
 
 
         </div>
     )
+}
+About.propTypes = {
+    onClickHome: PropTypes.func.isRequired,
+    onClickAbout: PropTypes.func.isRequired,
+    onClickContact: PropTypes.func.isRequired,
 }
